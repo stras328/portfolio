@@ -1,0 +1,789 @@
+<!--
+	The head section is extremely long and contains a lot of WordPress and theme-generated code.
+	For better readability, consider splitting custom code, meta tags, styles, and scripts into separate files.
+	Below is a cleaned-up and indented version of the head section for easier navigation and editing.
+-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="max-image-preview:large">
+	<meta name="generator" content="WordPress 6.8.3">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>sophia strange</title>
+	<link rel="canonical" href="https://ondertak.be/">
+	<link rel="shortlink" href="https://ondertak.be/">
+	<link rel="icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-150x150.jpg" sizes="32x32">
+	<link rel="icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg" sizes="192x192">
+	<link rel="apple-touch-icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg">
+	<meta name="msapplication-TileImage" content="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display:wght@400&display=swap">
+	<link rel="stylesheet" id="wp-block-library-css" href="https://ondertak.be/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3" type="text/css" media="all">
+	<link rel="stylesheet" id="visual-portfolio-block-filter-by-category-css" href="https://ondertak.be/wp-content/plugins/visual-portfolio/build/gutenberg/blocks/filter-by-category/style.css?ver=1751916769" type="text/css" media="all">
+	<link rel="stylesheet" id="visual-portfolio-block-pagination-css" href="https://ondertak.be/wp-content/plugins/visual-portfolio/build/gutenberg/blocks/pagination/style.css?ver=1751916769" type="text/css" media="all">
+	<link rel="stylesheet" id="visual-portfolio-block-sort-css" href="https://ondertak.be/wp-content/plugins/visual-portfolio/build/gutenberg/blocks/sort/style.css?ver=1751916769" type="text/css" media="all">
+	<link rel="stylesheet" id="minimalio_theme-css" href="https://ondertak.be/wp-content/themes/minimalio/assets/dist/css/minimalio-theme.min.css?ver=1759228495497" type="text/css" media="all">
+	<link rel="stylesheet" id="minimalio-child-style-css" href="https://ondertak.be/wp-content/themes/art-portfolio/style.css?ver=6.8.3" type="text/css" media="all">
+	<link rel="stylesheet" id="parent-style-css" href="https://ondertak.be/wp-content/themes/minimalio/style.css?ver=1.4.34" type="text/css" media="all">
+	<link rel="stylesheet" id="artportfolio-child-custom-style-css" href="https://ondertak.be/wp-content/themes/art-portfolio/assets/artportfolio-styles.css?ver=1.0" type="text/css" media="all">
+	<link rel="stylesheet" id="artportfolio-child-style-css" href="https://ondertak.be/wp-content/themes/art-portfolio/style.css?ver=1.0" type="text/css" media="all">
+	<link rel="https://api.w.org/" href="https://ondertak.be/wp-json/">
+	<link rel="alternate" title="JSON" type="application/json" href="https://ondertak.be/wp-json/wp/v2/pages/346">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ondertak.be/xmlrpc.php?rsd">
+	
+	<link rel="stylesheet" href="style.css">
+
+
+	<script type="text/javascript" src="https://ondertak.be/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+	<script type="text/javascript" src="https://ondertak.be/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+	<script type="text/javascript" src="https://ondertak.be/wp-content/themes/art-portfolio/assets/artportfolio-script.js?ver=6.8.3" id="custom-script-js"></script>
+	</head>
+
+	<script>
+	// Simple local filter for project categories
+	document.addEventListener('DOMContentLoaded', function () {
+		const categoryRadios = document.querySelectorAll('.posts-ajax__radio');
+		const posts = document.querySelectorAll('.my-posts .post-item');
+		categoryRadios.forEach(radio => {
+			radio.addEventListener('change', function () {
+				const label = this.value;
+				posts.forEach(post => {
+					// Each post has data-category attributes in the original WP plugin, but here we use text matching
+					const categories = post.textContent.toLowerCase();
+					if (label === 'all' || categories.includes(label.toLowerCase())) {
+						post.style.display = '';
+					} else {
+						post.style.display = 'none';
+					}
+				});
+			});
+		});
+	});
+	</script>
+</head>
+		<noscript>
+			<style type="text/css">
+				.vp-portfolio__preloader-wrap{display:none}.vp-portfolio__filter-wrap,.vp-portfolio__items-wrap,.vp-portfolio__pagination-wrap,.vp-portfolio__sort-wrap{opacity:1;visibility:visible}.vp-portfolio__item .vp-portfolio__item-img noscript+img,.vp-portfolio__thumbnails-wrap{display:none}
+			</style>
+		</noscript>
+		<meta charset="utf-8">	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display:wght@400&amp;display=swap">		<style type="text/css">
+			/* If html does not have either class, do not show lazy loaded images. */
+			html:not(.vp-lazyload-enabled):not(.js) .vp-lazyload {
+				display: none;
+			}
+		</style>
+		<script>
+			document.documentElement.classList.add(
+				'vp-lazyload-enabled'
+			);
+		</script>
+		<link rel="icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-150x150.jpg" sizes="32x32">
+<link rel="icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg">
+<meta name="msapplication-TileImage" content="https://ondertak.be/wp-content/uploads/2025/09/android-chrome-512x512-1-300x300.jpg">
+		<style type="text/css" id="wp-custom-css">
+			
+.header__brand {
+	font-family:Baskervville;
+	font-weight:100;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.post-card-3 .post-card__body {
+color: white!important;
+background: rgba(0,0,0,0.2)!important;
+}
+
+.post-card-3 .post-card__body {
+color: white!important;
+background: rgba(0,0,0,0.2)!important;
+border-color: #fff!important;
+}
+
+/* adjust the pixels */
+@media screen and (min-width:769px) {
+.navbar-brand.custom-logo-link img {
+margin-top:13px;
+}}
+
+
+@media screen and (min-width: 769px) {
+.navbar-brand.custom-logo-link img {
+margin-top: 13px;
+padding-right: 30px;
+}}		</style>
+		
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.pgV-E-68K-A.L.W.O/am=AMA/d=0/rs=AN8SPfo2HeflihKMbfgwV84pq3lzEm8ziw/m=el_main_css"><style>
+      body.shimeji-pinned iframe {
+        pointer-events: none;
+      }
+      body.shimeji-select-ie {
+        cursor: cell !important;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar {
+        width: 6px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb {
+        background-color: rgba(30,30,30,0.6);
+        border-radius: 3px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5">
+    </head>
+
+    <body class="home wp-singular page-template page-template-portfolio-atbottompage page-template-portfolio-atbottompage-php page page-id-346 wp-custom-logo wp-theme-minimalio wp-child-theme-art-portfolio" style="pointer-events: auto;">
+
+
+<div id="page" class="site bg-cover bg-no-repeat bg-center bg-fixed
+ vertical " style="pointer-events: auto;">
+	<!-- Skip to content Accessibility link -->
+	<a class="skip-to-content-link screen-reader-text" href="#main">
+		<span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Skip to Content</font></font></span>	</a>
+	
+	<!-- Loading spinner -->
+	<div class="lds-dual-ring"></div>
+	<!-- ******************* HEADER ******************* -->
+	<header id="wrapper-header" class="header py-8
+	 header__fixed 	" style="pointer-events: auto;">
+		<div class="header__container relative container">
+
+			
+<div id="wrapper-navbar" itemscope="" itemtype="http://schema.org/WebSite">
+
+	<div class="header__row flex flex-wrap justify-between items-center
+		">
+	<div class="w-auto p-0 header__col-left">
+		<!-- Your site title as branding in the menu -->
+		<a href="index.html" class="navbar-brand custom-logo-link" rel="home" aria-current="page"><img width="1920" height="573" src="https://ondertak.be/wp-content/uploads/2025/09/ondertak_rechthoek-rgb.jpg" class="img-fluid" alt="sub-branch architecture" decoding="async" fetchpriority="high" > </a>
+	</div><!-- end header col left -->
+	<div class="flex flex-wrap items-center w-auto p-0 header__col-right">
+		<!-- The WordPress Main Menu goes here -->
+<!-- Original Sidebar Menu and Styling -->
+<nav class="hidden menu-main-container lg:block header__main-menu-bold">
+	<ul class="flex flex-wrap justify-end m-0 align-middle header__menu gap-x-8">
+		<li id="menu-item-359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-346 current_page_item nav__item  menu-item-359">
+			<a href="index.html" class="nav__link" aria-current="page" data-slug="">work</a>
+		</li>
+		<li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page nav__item  menu-item-993">
+			<a href="about.html" class="nav__link" data-slug="">about</a>
+		</li>
+		<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page nav__item  menu-item-397">
+			<a href="contact.html" class="nav__link" data-slug="">contact</a>
+		</li>
+	</ul>
+</nav>
+		<span class="flex flex-wrap justify-end gap-2 social__block header__social-block">
+									</span>
+	</div><!-- end header col right -->
+	</div><!-- end wrapper header -->
+
+	
+
+</div><!-- #wrapper-navbar end -->
+
+			<nav class="header__mobile-button" aria-label="Mobile Toggle">
+			<button class="header__mobile-button absolute z-[110] block p-0 text-black bg-transparent border-none shadow-none main-header__menu-link md:hidden top-1/2 right-4 md:right-6 lg:right-8 -translate-y-2/4 appearance-auto hover:border-none mobile-toggle" data-toggle="collapse" data-link="#mobilemenu" data-target="#mobilemenu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+				<svg role="presentation" class="mobile-menu__open-icon w-6 h-6"><title>Open Icon</title><use xlink:href="#bars"></use></svg><svg role="presentation" class="mobile-menu__close-icon w-6 h-6"><title>Close Icon</title><use xlink:href="#close"></use></svg>			</button>
+			</nav>
+		</div>
+	
+<div id="mobilemenu" class="mobile-menu full-width fixed overflow-y-scroll top-0 bottom-0 right-0 max-w-full w-full bg-white sm:[&amp;.right-wrapper]:max-w-sm">
+
+	<div class="relative p-0 bg-white mobile-menu__logo-wrap" style="min-height: 3248.5px;">
+
+
+
+		
+	</div>
+
+	<div class="pb-8 mobile-menu__container">
+
+			<nav class="minimalio-mobile-menu"><ul class="px-8 py-4 mobile-menu__menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-346 current_page_item mobile-menu__item  menu-item-359"><a href="https://ondertak.be/" class="mobile-menu__link" aria-current="page" data-slug=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">work</font></font></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page mobile-menu__item  menu-item-357"><a href="https://ondertak.be/about-me/" class="mobile-menu__link" data-slug=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">vision</font></font></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page mobile-menu__item  menu-item-993"><a href="https://ondertak.be/over/" class="mobile-menu__link" data-slug=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">about</font></font></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page mobile-menu__item  menu-item-397"><a href="https://ondertak.be/contact/" class="mobile-menu__link" data-slug=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">contact</font></font></a></li>
+</ul></nav>
+		<div class="container px-8 mobile-menu__container-social">
+			<span class="flex flex-wrap justify-center gap-2 mt-8 social__block">
+							</span>
+		</div>
+
+
+	</div>
+</div>
+	</header>
+
+<!-- ******************* The Main Area ******************* -->
+	<div class="site-content overflow-x-hidden " id="page-content">
+<div class="portfolio__wrapper wrapper" id="archive-wrapper">
+
+	<div class="container" id="content" tabindex="-1">
+
+		<div class="row">
+
+			<main class="site-main content-area w-full" id="main" data-bgcolor="#cecece">
+				<!-- Page content -->
+									
+<article class="post-346 page type-page status-publish hentry" id="post-346">
+
+
+	
+	<div class="entry-content">
+
+		
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+	</footer><!-- .entry-footer -->
+
+</article>
+								<!-- End page content -->
+				<!-- Portfolio list -->
+									
+
+<div class="posts-ajax overflow-hidden grid posts__posts-infinite w-full pb-12 lg:pb-16" data-ajax="true">
+
+
+		
+		<div class="pt-0 pb-8 m-0 posts-ajax__categories">
+
+			<div class="flex items-center justify-between m-0 posts-ajax__row" data-filter="">
+
+					<div class="flex flex-wrap items-center justify-start w-auto posts-ajax__categories-wrapper gap-x-4 lg:gap-x-8 gap-y-4">
+
+						<label class="posts-ajax__tab
+						checked  inline-block bg-transparent h-fit rounded-none" data-label="all" data-number="17" tabindex="0">
+							<input type="radio" class="posts-ajax__radio
+							gridchecked  absolute top-0 right-0 bottom-0 left-0 invisible" name="category" value="all" tabindex="0">
+							<span class="posts-ajax__tab-label  block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+								all projects							</font></font></span>
+
+						</label>
+
+						
+							<label class="posts-ajax__tab
+								 inline-block bg-transparent h-fit rounded-none" data-label="graphic design" data-number="9" tabindex="0">
+
+								<input type="radio" class="posts-ajax__radio
+								grid absolute top-0 right-0 bottom-0 left-0 invisible" name="category" value="graphic design">
+								<span class="posts-ajax__tab-label  block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+									graphic design								</font></font></span>
+
+							</label>
+
+								
+							<label class="posts-ajax__tab
+								 inline-block bg-transparent h-fit rounded-none" data-label="concert photography" data-number="9" tabindex="0">
+
+								<input type="radio" class="posts-ajax__radio
+								grid absolute top-0 right-0 bottom-0 left-0 invisible" name="category" value="concert photography">
+								<span class="posts-ajax__tab-label  block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+									concert photography								</font></font></span>
+
+							</label>
+
+								
+							<label class="posts-ajax__tab
+								 inline-block bg-transparent h-fit rounded-none" data-label="illustration" data-number="8" tabindex="0">
+
+								<input type="radio" class="posts-ajax__radio
+								grid absolute top-0 right-0 bottom-0 left-0 invisible" name="category" value="book design">
+								<span class="posts-ajax__tab-label  block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+									book design								</font></font></span>
+
+							</label>
+
+								
+							<label class="posts-ajax__tab
+								 inline-block bg-transparent h-fit rounded-none" data-label="ui/ux design" data-number="3" tabindex="0">
+
+								<input type="radio" class="posts-ajax__radio
+								grid absolute top-0 right-0 bottom-0 left-0 invisible" name="category" value="ui/ux design">
+								<span class="posts-ajax__tab-label  block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+									ui/ux design								</font></font></span>
+
+							</label>
+
+								
+					</div>
+			</div>
+
+		</div>
+
+	
+		<div class="posts-ajax__posts portfolio-post-type gap_1		aspect-ratio-" data-card="post-card-3" data-grid="grid" data-number="17" data-author="author-1" data-columns="3" data-posts_number="24">
+
+			<div class="posts__container photoswipe-wrapper">
+
+									<div class="my-posts" data-category="all" data-type="portfolio">
+
+
+						<!-- spot where u can change the number of columns -->
+				
+
+						<div class="grid grid-cols-1 sm:grid-cols-2 posts__row pswp__wrap lg:grid-cols-3">
+							
+							<div class="post-item
+								">
+
+<!-- project cards -->
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="465">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_matt_maltese.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				Matt Maltese			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Matt%20Maltese_Sophia_Strange_1.jpg" class="attachment-large size-large" alt="" decoding="async" >
+				<img width="1920" height="1920" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Matt%20Maltese_Sophia_Strange_5.jpg" class="hover-image" alt="" decoding="async" > 
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					Matt Maltese				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+								
+
+
+
+
+
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="485">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_se_so_neon.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				SE SO NEON			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+  <img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/IMG_0490_BW.jpg" class="attachment-large size-large" alt="Se So Neon" decoding="async">
+  <img width="1600" height="1067" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/IMG_0257_BW.jpg" class="hover-image" alt="" decoding="async">
+  <div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					SE SO NEON				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+	
+		
+								
+
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="452">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_ocean_alley.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				Ocean Alley			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Ocean_Alley_SophiaStrange_1.jpg" class="attachment-large size-large" alt="" decoding="async" > 
+				<img width="1302" height="1920" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Ocean_Alley_SophiaStrange_18.jpg" class="hover-image" alt="" decoding="async" > 
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					Ocean Alley				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+
+
+
+
+
+			
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="482">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_sunday_1994.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				Sunday 1994		</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/SUNDAY1994_SophiaStrange_B%26W_11.jpg" class="attachment-large size-large" alt="" decoding="async" > 
+				<img width="1611" height="1920" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/SUNDAY1994_SophiaStrange_B%26W_19.jpg" class="hover-image" alt="" decoding="async" >
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					Sunday 1994				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+			
+
+
+								
+
+
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="466">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_XIKERS.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				XIKERS			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Xikers_SophiaStrange_1.jpg" class="attachment-large size-large" alt="" decoding="async">
+				<img width="1920" height="1920" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Xikers_SophiaStrange_4.jpg" class="hover-image" alt="" decoding="async">
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-250 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					XIKERS				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+								
+
+
+
+
+
+
+
+
+					
+
+
+
+
+								
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="451">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_hannah_bahng.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				hannah bahng			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Hannah%20Bahng%20at%20Mercury%20Lounge-%20Sophia%20Strange%2029.jpg" class="attachment-large size-large" alt="" decoding="async" > 
+				<img width="1920" height="1738" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/Hannah%20Bahng%20at%20Mercury%20Lounge-%20Sophia%20Strange%2026.jpg" class="hover-image" alt="" decoding="async" >
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					hannah bahng			</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+					
+		
+								
+
+
+
+
+		<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="455">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_home.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				home			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/home%20cover%20mockup.jpg" class="attachment-large size-large" alt="" decoding="async" > 
+				<img width="1920" height="1728" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/home%20spread%20mockup%202.jpg" class="hover-image" alt="" decoding="async" > 
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					home				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											book design									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+								
+
+
+
+
+
+
+
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="535">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_AURORA.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				AURORA			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/AURORA%20at%20Beacon%20Theatre%20Sophia%20Strange%201.jpg" class="attachment-large size-large" alt="" decoding="async" > 
+				<img width="1601" height="1920" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/AURORA%20at%20Beacon%20Theatre%20Sophia%20Strange%2011.jpg" class="hover-image" alt="" decoding="async" > 
+				<div class="absolute top-0 bottom-0 left-0 right-0 z-10 transition-opacity duration-300 bg-black bg-white opacity-0 post-card__overlay"></div>
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					AURORA				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											concert photography									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+
+
+
+					
+
+
+
+
+
+
+	<div class="post-card post-card-3 relative w-full flex flex-col text-left hover-image" data-card-id="460">
+					<a class="absolute top-0 bottom-0 left-0 right-0 z-20 no-underline opacity-0 post-card__link" href="gallery_athena.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+				Athena			</font></font></a>
+		
+					<figure class="relative w-full h-full post-card__image">
+				<img width="1024" height="1024" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/athena%20cover%20mockup.jpg" class="attachment-large size-large" alt="" > 
+				<img width="1920" height="1665" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/athena%20spread%20mockup%204.jpg" class="hover-image" alt="" decoding="async" > 
+			</figure>
+		
+		<div class="absolute top-0 z-10 flex flex-col justify-center w-full h-full p-2 m-0 text-center transition-opacity duration-300 opacity-0 post-card__body md:p-4">
+
+							<h5 class="post-card__heading"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+					Athena				</font></font></h5>
+			
+
+							<div class="hidden post-card__categories md:block"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+											book design									</font></font></div>
+			
+		</div>
+
+	</div>
+
+							</div>
+							
+							<div class="post-item
+								">
+
+								
+
+
+
+								
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+								<!-- End Portfolio list -->
+
+
+
+
+
+				<!-- Pagination -->
+				<div class="container">
+					<div class="flex flex-col items-center justify-between w-full gap-4 py-8 mx-auto pagination">
+						<div class="hidden pagination__load-more-wrapper">
+							<a class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 text-sm font-medium text-center text-white bg-black border border-transparent rounded-md shadow-sm gap-x-2 pagination__load-more" href="#">
+								<span class="pagination__load-more-text">Load more projects</span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 animate-spin" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 4v2m0 12v2m8-10h2m-18 0h2m10-8l-1.414 1.414M7.414 18.586L6 17l-4 4l1.414 1.414z" />
+</svg>							</a>
+						</div>
+					</div>
+				</div>
+				<!-- End Pagination -->
+			</main><!-- #main -->
+
+		</div> <!-- .row -->
+
+	</div><!-- #content -->
+
+</div><!-- #archive-wrapper -->
+
+
+<!--Close page container -->
+</div>
+<!-- ******************* FOOTER ******************* -->
+<footer id="wrapper-footer" class="minimalio-footer">
+
+	
+	
+		<div class="footer__copyright container">
+			<div class="wrapper footer__wrapper">
+
+				<div id="copyright" class="footer__section">
+
+					
+<div class="footer__section-row row">
+
+	<div class="w-full footer__left md:w-1/3">
+		<div class="site-info">
+
+			<span class="flex justify-center footer__copyright-first md:justify-start">
+
+
+				
+					<span class="mr-4 footer__copyright-first-copy">
+											</span>
+					
+
+
+
+				</span>
+
+		</div><!-- .site-info -->
+	</div>
+	<div class="flex justify-center w-full mt-4 text-center footer__center md:w-1/3 md:mt-0">
+
+					
+
+	</div>
+
+	<div class="w-full footer__right md:w-1/3">
+		<div class="flex justify-center mt-4 footer__copyright-last md:justify-end md:mt-0">
+					</div>
+	</div>
+
+</div><!-- row end -->
+
+				</div>
+			</div>
+
+
+		</div>
+	
+</footer>
+
+</div><!-- page end -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/art-portfolio\/*","\/wp-content\/themes\/minimalio\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div class="svg-sprites" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">script type="text/javascript" id="minimalio_theme-js-extra">
+/* <![CDATA[ */
+var minimalio_theme = {"siteurl":"https:\/\/ondertak.be"};
+var wpAjaxLoad = {"ajax_loadUrl":"https:\/\/ondertak.be\/wp-admin\/admin-ajax.php","nonce":"a2f03f56fa"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ondertak.be/wp-content/themes/minimalio/assets/dist/js/minimalio-theme.min.js?ver=1759228495497" id="minimalio_theme-js"></script>
+<script type="text/javascript" src="https://ondertak.be/wp-content/plugins/visual-portfolio/build/assets/js/pagination-infinite.js?ver=50005113e26cd2b547c0" id="visual-portfolio-pagination-infinite-js"></script>
+
+
+
+<div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div></body>
+
+</html>
