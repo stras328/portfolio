@@ -1,5 +1,4 @@
 const images = [
-  'title cards/title card 1.jpg',
   'title cards/title card 2.jpg',
   'title cards/title card 3.jpg',
   'title cards/title card 5.jpg',
