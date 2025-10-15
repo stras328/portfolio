@@ -16,7 +16,7 @@ const images = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = [
-    'images/title card 2.jpg',
+    'title cards/title card 1.jpg',
     // ...
   ];
 
