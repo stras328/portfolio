@@ -14,16 +14,21 @@ const images = [
   'title cards/title card 16.jpg',
 ];
 
-let index = 0;
-const img = document.getElementById('swapper');
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [
+    'images/title card 2.jpg',
+    // ...
+  ];
 
-setInterval(() => {
-  img.style.opacity = 0;
+  let index = 0;
+  const img = document.getElementById('swapper');
 
-  // Wait for fade out (500ms), then swap and fade in
-  setTimeout(() => {
-    index = (index + 1) % images.length;
-    img.src = images[index];
-    img.style.opacity = 1;
-  }, 0); // match your CSS transition time
-}, 1250); // change image every 1.25 seconds (adjust as needed)
+  setInterval(() => {
+    img.style.opacity = 0;
+    setTimeout(() => {
+      index = (index + 1) % images.length;
+      img.src = images[index];
+      img.style.opacity = 1;
+    }, 500); // match CSS transition duration (0.5s = 500ms)
+  }, 1250);
+});
