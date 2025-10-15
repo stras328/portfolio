@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const images = [
-    'Title Cards/title card 1.JPG', // include the starting image!
+    'Title Cards/title card 1.JPG',
     'Title Cards/title card 2.JPG',
     'Title Cards/title card 3.JPG',
     'Title Cards/title card 5.JPG',
@@ -16,16 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     'Title Cards/title card 16.JPG',
   ];
 
-  let index = 1; // start at 1, since the first image is already shown
+  let index = 1; // start at 1, first image already loaded
   const img = document.getElementById('swapper');
 
   setInterval(() => {
-    img.style.opacity = 0;
-
-    setTimeout(() => {
-      img.src = images[index];
-      img.style.opacity = 1;
-      index = (index + 1) % images.length;
-    }, 500); // match CSS fade duration
+    img.src = images[index];
+    index = (index + 1) % images.length;
   }, 1250);
 });
