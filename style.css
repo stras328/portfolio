@@ -11,7 +11,7 @@
 .gallery-nav-btn {
 	font-family: 'Gilda Display', serif;
 	font-size: 0.75rem;
-	color: #255f10;
+	color: #1a191e;
 	background: transparent;
 	border: none;
 	letter-spacing: 1.5px;
@@ -42,7 +42,7 @@
 	text-align: right;
 }
 .gallery-nav-btn:hover {
-	color: #0a2c08;
+	color: #1a191e;
 	text-decoration: underline;
 }
 
@@ -85,10 +85,10 @@
 		body {
 			--wp--style--global--content-size: 1400px;
 			background-color: #ffffff;
-			color: #255f10;
+			color: #1a191e;
 			font-family: "Gilda Display", sans-serif;
 			--preset--background-color: #ffffff;
-			--preset--font-color: #255f10;
+			--preset--font-color: #1a191e;
 		}
 
 		.site .custom-logo-link .img-fluid {
@@ -99,19 +99,19 @@
 		.header ul li .nav__link,
 		.header .socials__icon,
 		.header .header__brand {
-			color: #255f10;
+			color: #1a191e;
 		}
 
 		.header .socials__icon {
-			fill: #255f10;
+			fill: #1a191e;
 		}
 
 		.site .menu-main-container .nav__link:hover,
 		.site .menu-main-container .current-menu-item > .nav__link,
 		.site .menu-main-container .nav__link:after,
 		.posts-ajax__tab span:after {
-			color: #255f10 !important;
-			border-color: #255f10 !important;
+			color: #1a191e !important;
+			border-color: #1a191e !important;
 		}
 
 		.header .header__brand:hover,
@@ -119,7 +119,7 @@
 		.posts-ajax__tab:hover,
 		.posts__tab.checked,
 		.posts__tab:hover {
-			color: #255f10;
+			color: #1a191e;
 		}
 
 		body .menu-main-container > .current-menu-item > .nav__link {
@@ -142,11 +142,11 @@
 
 		.site .header__mobile-button .mobile-menu__open-icon,
 		.site .header__mobile-button .mobile-menu__close-icon {
-			color: #255f10 !important;
+			color: #1a191e !important;
 		}
 
 		.site .header__mobile-button .mobile-menu__close-icon:hover {
-			color: #255f10;
+			color: #1a191e;
 		}
 
 		@media (min-width: 768px) {
