@@ -22,6 +22,7 @@
 	pointer-events: auto;
 }
 
+
 .gallery-nav-buttons {
 	opacity: 0;
 	transition: opacity 0.3s;
@@ -67,6 +68,12 @@
 		.posts__tab-label,
 		.posts-ajax__tab-label {
 			font-size: 16px !important;
+			/* Use Dolly Pro Regular for category buttons; match sidebar text spacing/weight */
+			font-family: "Dolly Pro", "Dolly Pro Regular", serif !important;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: 2px;
+			text-transform: none;
 		}
 
 		.posts-ajax__row,
@@ -102,6 +109,17 @@
 			color: #1a191e;
 		}
 
+		/* Sidebar / main menu — use Dolly Pro Regular */
+		.site .menu-main-container .nav__link,
+		.site .menu-main-container .nav__link:visited,
+		.menu-main-container .nav__link,
+		.mobile-menu__link,
+		.minimalio-mobile-menu .mobile-menu__link {
+			font-family: "Dolly Pro", "Dolly Pro Regular", serif !important;
+			font-weight: 400;
+			font-style: normal;
+		}
+
 		.header .socials__icon {
 			fill: #1a191e;
 		}
@@ -120,6 +138,12 @@
 		.posts__tab.checked,
 		.posts__tab:hover {
 			color: #1a191e;
+		}
+
+		/* Make checked/active category tabs match sidebar active weight */
+		.posts-ajax__tab.checked,
+		.posts__tab.checked {
+			font-weight: bold;
 		}
 
 		body .menu-main-container > .current-menu-item > .nav__link {
@@ -175,5 +199,16 @@
 			}
 			.header__social-block {
 				display: none;
+			}
+
+			/* Make header logo fluid on small screens (when side menu is hidden) */
+			.navbar-brand.custom-logo-link img,
+			.site .custom-logo-link .img-fluid {
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin-left: 0;
+				padding-right: 0;
 			}
 		}
