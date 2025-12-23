@@ -1,4 +1,17 @@
 /* Gallery navigation buttons */
+
+@media (max-width: 768px) {
+  .posts-ajax__tab-label {
+    font-size: 0.95rem;
+    text-align: center; /* or center if you prefer */
+  }
+   .posts-ajax__categories-wrapper {
+    justify-content: center;
+}
+}
+
+
+
 .gallery-nav-buttons {
 	position: fixed;
 	left: 0;
@@ -9,7 +22,6 @@
 	z-index: 1000;
 }
 .gallery-nav-btn {
-	font-family: 'Gilda Display', serif;
 	font-size: 0.75rem;
 	color: #1a191e;
 	background: transparent;
@@ -21,6 +33,7 @@
 	transition: color 0.2s;
 	pointer-events: auto;
 }
+
 
 
 .gallery-nav-buttons {
