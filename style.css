@@ -11,6 +11,10 @@
 }
 
 
+.post-item:empty {
+  display: none;
+}
+
 
 .gallery-nav-buttons {
 	position: fixed;
