@@ -171,6 +171,74 @@ padding-right: 30px;
 		<span class="flex flex-wrap justify-end gap-2 social__block header__social-block">
 									</span>
 	</div><!-- end header col right -->
+
+
+
+<!-- CD Player: directly beneath the menu -->
+<div id="matt-cd-player" style="margin-top:6rem; margin-left:0; position:relative; height:150px; width:240px; display:none;">
+	<!-- CD (bottom layer) -->
+	<img class="img1" src="https://web.archive.org/web/20220514070535im_/https://cdn.discordapp.com/attachments/822589056256311328/890714753780031488/image0.png"
+		style="position:absolute; left:65px; top:0px; width:100px; height:100px; z-index:1; animation:spin 4s linear infinite;">
+	<!-- Album cover (top layer, overlapping CD, no border radius) -->
+	<img class="img2" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/superstar.png"
+		style="position:absolute; left:0px; top:0px; width:100px; height:100px; z-index:1; box-shadow:0 2px 12px rgba(0,0,0,0.12); background:black;">
+	<!-- Clickable area for play/pause -->
+	<div id="lol" style="position:absolute; left:0px; top:0px; width:100px; height:100px; z-index:3; cursor:pointer;"></div>
+	<audio id="audio" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/skz%20divine"></audio>
+</div>
+<style>
+		@media (min-width: 1024px) {
+			#matt-cd-player { display: block !important; }
+		}
+		@media (max-width: 1023px) {
+			#matt-cd-player { display: none !important; }
+		}
+		.img1 {
+			-webkit-animation: spin 4s linear infinite;
+			-moz-animation: spin 4s linear infinite;
+			animation: spin 4s linear infinite;
+		}
+	
+		@-moz-keyframes spin {
+			100% { -moz-transform: rotate(360deg); }
+		}
+		@-webkit-keyframes spin {
+			100% { -webkit-transform: rotate(360deg); }
+		}
+		@keyframes spin {
+			100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+		}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var lol = document.getElementById("lol");
+			if (lol) {
+				lol.onclick = function() {
+					var audio = document.getElementById("audio");
+					if (audio.paused) audio.play();
+					else audio.pause();
+				};
+			}
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</div><!-- end wrapper header -->
 
 	
@@ -276,7 +344,7 @@ padding-right: 30px;
   <div class="gallery-info" style="flex: 1 1 40%; min-width: 250px; max-width: 500px; padding-left: 2rem;">
     <h2 style="font-family: 'Gilda Display', serif; font-size: 1.75rem; margin-bottom: 1rem;">SUPERSTAR</h2>
     <p style="font-size: 0.8rem; color: #333; line-height: 1.6;">
-A hypothetical album brand treatment for the K-Pop group STRAY KIDS complete with the standard album inclusions of a photobook, CD, lyric sheet, and a sticker pack.
+A hypothetical album brand treatment for the K-Pop group STRAY KIDS. Complete with the standard album inclusions of a photobook, CD, lyric sheet, and a sticker pack.
 	</p>
   </div>
 </div>

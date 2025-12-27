@@ -203,8 +203,27 @@ padding-right: 30px;
     </style><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5"></head>
 
 <body class="wp-singular page-template-default page page-id-990 wp-custom-logo wp-theme-minimalio wp-child-theme-art-portfolio" style="pointer-events: auto;">
-
-
+<style>
+/* Remove whitespace above the first content */
+body, #page, .site, .wrapper, #page-wrapper, #content, .row, #primary, .site-main, .entry-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.entry-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+/* On mobile, remove header space above main content */
+@media (max-width: 768px) {
+  #wrapper-header {
+    display: none !important;
+  }
+  .site-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+</style>
 <div id="page" class="site bg-cover bg-no-repeat bg-center bg-fixed
  vertical " style="pointer-events: auto;">
 	<!-- Skip to content Accessibility link -->
@@ -214,8 +233,7 @@ padding-right: 30px;
 	<!-- Loading spinner -->
 	<div class="lds-dual-ring"></div>
 	<!-- ******************* HEADER ******************* -->
-	<header id="wrapper-header" class="header py-8
-	 header__fixed 	">
+	<header id="wrapper-header" class="header py-8 header__fixed">
 		<div class="header__container relative container">
 
 			
@@ -225,7 +243,19 @@ padding-right: 30px;
 		">
 	<div class="w-auto p-0 header__col-left">
 		<!-- Your site title as branding in the menu -->
-		<a href="index.html" class="navbar-brand custom-logo-link" rel="home" aria-current="page"><img width="1920" height="573" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/sophia%20strange.png" class="img-fluid" alt="sub-branch architecture" decoding="async" fetchpriority="high" > </a>
+		<!-- Logo removed -->
+		<!-- Logo only on desktop -->
+          <a href="index.html" class="navbar-brand custom-logo-link" rel="home" aria-current="page" style="display:none;">
+            <img width="1920" height="573" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/sophia%20strange.png" class="img-fluid" alt="sophia strange logo" decoding="async" fetchpriority="high">
+          </a>
+          <style>
+            @media (min-width: 1024px) {
+              .navbar-brand.custom-logo-link { display: block !important; }
+            }
+            @media (max-width: 1023px) {
+              .navbar-brand.custom-logo-link { display: none !important; }
+            }
+          </style>
 	</div><!-- end header col left -->
 	<div class="flex flex-wrap items-center w-auto p-0 header__col-right">
 		<!-- The WordPress Main Menu goes here -->
@@ -366,7 +396,7 @@ padding-right: 30px;
 <p>dec. 2025 - present &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://shop.kpopnara.com/?srsltid=AfmBOoqsX8Ct1oBTOqA0UjCiIThXr7zuuoG1XuT_Df1rvcO0kEoN2_3h" target="blank_"> copywriter @ KPOP NARA </a>  </p>
 
 
-<p><br> <i><a href="https://www.linkedin.com/in/sophiastrange/" target="blank_"> linkedin </a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.instagram.com/sjhshutter/" target="blank_"> photography instagram </a>  &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:sjhstrange@gmail.com" target="blank_"> sjhstrange@gmail.com </a>  </i></p>
+<p><br> <i><a href="https://www.linkedin.com/in/sophiastrange/" target="blank_"> linkedin </a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.instagram.com/sjhshutter/" target="blank_"> photography instagram </a>  &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://open.spotify.com/user/g6x62d178cmt8vbngzc2jc2mo?si=f156e33641eb4343" target="blank_"> spotify </a>  &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:sjhstrange@gmail.com" target="blank_"> sjhstrange@gmail.com </a>  </i></p>
 
 	</div><!-- .entry-content -->
 

@@ -109,7 +109,51 @@ border-color: #fff!important;
 .navbar-brand.custom-logo-link img {
 margin-top: 13px;
 padding-right: 20px;
-}}		</style>
+}}		
+
+
+
+@media (max-width: 768px) {
+      .navbar-brand.custom-logo-link img {
+        width: 90vw !important;
+        height: auto !important;
+        max-width: 90vw !important;
+        display: block;
+        margin: 0 auto;
+      }
+      .header__col-left {
+        width: 90vw !important;
+        padding: 0 !important;
+      }
+    }
+
+@media (max-width: 768px) {
+  #wrapper-header {
+    padding-bottom: 0 !important;
+  }
+  
+  .navbar-brand.custom-logo-link img {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .header__col-left {
+    width: 90vw !important;
+    padding: 0 !important;
+  }
+  
+  .header__row {
+    gap: 0 !important;
+  }
+}
+
+
+
+
+</style>
 		
 
 <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.pgV-E-68K-A.L.W.O/am=AMA/d=0/rs=AN8SPfo2HeflihKMbfgwV84pq3lzEm8ziw/m=el_main_css"><style>
@@ -143,8 +187,10 @@ padding-right: 20px;
 	
 	<!-- Loading spinner -->
 	<div class="lds-dual-ring"></div>
+
+
 	<!-- ******************* HEADER ******************* -->
-	<header id="wrapper-header" class="header py-8
+<header id="wrapper-header" class="header py-8
 	 header__fixed 	" style="pointer-events: auto;">
 		<div class="header__container relative container">
 
@@ -155,7 +201,7 @@ padding-right: 20px;
 		">
 	<div class="w-auto p-0 header__col-left">
 		<!-- Your site title as branding in the menu -->
-		<a href="index.html" class="navbar-brand custom-logo-link" rel="home" aria-current="page"><img width="1920" height="573" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/sophia%20strange.png" class="img-fluid" alt="sub-branch architecture" decoding="async" fetchpriority="high" > </a>
+		<a href="index.html" class="navbar-brand custom-logo-link" rel="home" aria-current="page"><img width="1920" height="573" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/sophia%20strange.png" class="img-fluid" alt="sub-branch architecture" decoding="async" fetchpriority="high"> </a>
 	</div><!-- end header col left -->
 	<div class="flex flex-wrap items-center w-auto p-0 header__col-right">
 		<!-- The WordPress Main Menu goes here -->
@@ -173,6 +219,58 @@ padding-right: 20px;
 		</li>
 	</ul>
 </nav>
+<!-- Matt Maltese CD Player: beneath menu, no rounded corners, cover slightly overlaps CD, with space below menu -->
+<div id="matt-cd-player" style="position:relative; width:220px; height:120px; margin:3.5rem 0 2.5rem 0; display:none;">
+	<!-- CD (bottom layer, right) -->
+	<img class="img1" src="https://web.archive.org/web/20220514070535im_/https://cdn.discordapp.com/attachments/822589056256311328/890714753780031488/image0.png"
+		style="position:absolute; left:80px; top:10px; width:120px; height:120px; z-index:1; animation:spin 4s linear infinite;">
+	<!-- Album cover (top layer, left, slightly overlapping CD) -->
+	<img class="img2" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/matt%20song%20cover.jpg"
+		style="position:absolute; left:0; top:0; width:110px; height:110px; z-index:2; background:black; border-radius:0;">
+	<!-- Clickable area for play/pause (over album cover only) -->
+	<div id="lol" style="position:absolute; left:0; top:0; width:110px; height:110px; z-index:3; cursor:pointer;"></div>
+	<audio id="audio" src="https://file.garden/Zc6v_enOJ3-bBJBn/yt1s.com%20-%20Matt%20Maltese%20%20madhouse.mp3"></audio>
+</div>
+<style>
+	@media (min-width: 1024px) {
+		#matt-cd-player { display: block !important; }
+	}
+	@media (max-width: 1023px) {
+		#matt-cd-player { display: none !important; }
+	}
+	.img1 {
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+	}
+	.img1:hover {
+		cursor: help;
+		-webkit-animation-play-state: paused;
+		-moz-animation-play-state: paused;
+		animation-play-state: paused;
+	}
+	@-moz-keyframes spin {
+		100% { -moz-transform: rotate(360deg); }
+	}
+	@-webkit-keyframes spin {
+		100% { -webkit-transform: rotate(360deg); }
+	}
+	@keyframes spin {
+		100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+	}
+</style>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var lol = document.getElementById("lol");
+		if (lol) {
+			lol.onclick = function() {
+				var audio = document.getElementById("audio");
+				if (audio.paused) audio.play();
+				else audio.pause();
+			};
+		}
+	});
+</script>
 		<span class="flex flex-wrap justify-end gap-2 social__block header__social-block">
 									</span>
 	</div><!-- end header col right -->
@@ -207,6 +305,7 @@ padding-right: 20px;
 </div>
 	</header>
 
+
 <!-- ******************* The Main Area ******************* -->
 	<div class="site-content overflow-x-hidden " id="page-content">
 <div class="portfolio__wrapper wrapper" id="archive-wrapper">
@@ -232,6 +331,11 @@ padding-right: 20px;
 
 </article>
 								<!-- End page content -->
+
+
+
+
+								
 				<!-- Portfolio list -->
 									
 
