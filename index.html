@@ -58,7 +58,21 @@
 				});
 			});
 		});
+
 	});
+
+
+
+	function shuffleArray(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+	}
+
+
+</script>
+
 	</script>
 </head>
 
@@ -221,6 +235,162 @@ padding-right: 20px;
 </nav>
 
 	</div><!-- end header col right -->
+
+
+
+<!-- CD Player: directly beneath the menu -->
+<div id="matt-cd-player" style="margin-top:6rem; margin-left:0; position:relative; height:150px; width:240px; display:none;">
+	<!-- CD (bottom layer) -->
+	<img class="img1" src="https://web.archive.org/web/20220514070535im_/https://cdn.discordapp.com/attachments/822589056256311328/890714753780031488/image0.png"
+		style="position:absolute; left:65px; top:0px; width:100px; height:100px; z-index:1; animation:spin 4s linear infinite;">
+	<!-- Album cover (top layer, overlapping CD, no border radius) -->
+	<img class="img2" src="https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/current%20jams.jpg"
+		style="position:absolute; left:0px; top:0px; width:100px; height:100px; z-index:1; box-shadow:0 2px 12px rgba(0,0,0,0.12); background:black;">
+	<!-- Clickable area for play/pause -->
+	<div id="lol" style="position:absolute; left:0px; top:0px; width:100px; height:100px; z-index:3; cursor:pointer;"></div>
+	<div id="track-title"></div>
+	<audio id="audio"></audio>
+</div>
+<style>
+		@media (min-width: 1024px) {
+			#matt-cd-player { display: block !important; }
+		}
+		@media (max-width: 1023px) {
+			#matt-cd-player { display: none !important; }
+		}
+		.img1 {
+			-webkit-animation: spin 4s linear infinite;
+			-moz-animation: spin 4s linear infinite;
+			animation: spin 4s linear infinite;
+		}
+
+		.paused {
+		animation-play-state: paused !important;
+		}
+	
+		@-moz-keyframes spin {
+			100% { -moz-transform: rotate(360deg); }
+		}
+		@-webkit-keyframes spin {
+			100% { -webkit-transform: rotate(360deg); }
+		}
+		@keyframes spin {
+			100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+
+		}
+
+
+		#track-title {
+			position: fixed;
+			font-size: 12px !important;
+			font-family: "Dolly Pro", "Dolly Pro Regular", serif !important;
+			font-weight: 200;
+			font-style: normal;
+			letter-spacing: 2px;
+			color: #000;
+			background: rgba(255,255,255,0.9);
+			padding: 4px 6px;
+			border-radius: 4px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.15s ease;
+			white-space: nowrap;
+			z-index: 9999;
+		}
+
+#track-title.visible {
+	opacity: 1;
+}
+
+
+
+	</style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const audio = document.getElementById("audio");
+	const button = document.getElementById("lol");
+	const player = document.getElementById("matt-cd-player");
+	const titleEl = document.getElementById("track-title");
+
+	const tracks = [
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Mirtazapine%3A%20Hayley%20Williams",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Mother%3A%20Florence%20%26%20the%20Machine",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Rather%20Be%20Lonely%3A%20Don%20West",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Entertainer%3A%20NewDad",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Mephisto's%20Waltz%3A%20Benches",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/so%20real%3A%20wave%20to%20earth",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/FOCUS%3A%20Hearts2Hearts",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Hollow%3A%20STRAY%20KIDS",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/Palindrome%3A%20Flawed%20Mangoes",
+		"https://file.garden/Zc6v_enOJ3-bBJBn/portfolio/cd/AMERICAN%20GIRL%3A%20Tiffany%20Day"
+	];
+
+	shuffleArray(tracks);
+
+	let currentTrack = 0;
+	let hasPlayed = false;
+
+	function updateTitle() {
+		const filename = decodeURIComponent(tracks[currentTrack].split("/").pop());
+		titleEl.textContent = filename.replace(/\.[^/.]+$/, "");
+	}
+
+	audio.src = tracks[currentTrack];
+	updateTitle();
+
+	button.onclick = function () {
+		if (audio.paused) audio.play();
+		else audio.pause();
+	};
+
+	audio.addEventListener("play", function () {
+		hasPlayed = true;
+	});
+
+	audio.addEventListener("ended", function () {
+		currentTrack = (currentTrack + 1) % tracks.length;
+		audio.src = tracks[currentTrack];
+		updateTitle();
+		audio.play();
+	});
+
+	// 🖱 Cursor-follow tooltip behavior
+	player.addEventListener("mousemove", function (e) {
+		if (!hasPlayed) return;
+
+		titleEl.style.left = e.clientX + 12 + "px";
+		titleEl.style.top = e.clientY + 12 + "px";
+		titleEl.classList.add("visible");
+	});
+
+	player.addEventListener("mouseleave", function () {
+		titleEl.classList.remove("visible");
+	});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</div><!-- end wrapper header -->
 
 	
