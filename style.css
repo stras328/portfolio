@@ -181,3 +181,7 @@
 			background-color: white;
 		}
 
+.pswp__bg {
+	background: #ededed !important;
+}
+
