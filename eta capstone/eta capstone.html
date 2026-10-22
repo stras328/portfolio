@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>an archive of the present past</title>
+    <meta
+      name="description"
+      content="A small exploratory notes page about place, memory, and in-between spaces."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="arrows" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="panel hero-panel" id="hero">
+        <header>
+          <div class="hero-logo-page">
+            <div class="title">
+              <div class="title-line">AN</div>
+              <div class="title-line">ARCHIVE</div>
+              <div class="title-line">OF</div>
+              <div class="title-line">THE</div>
+              <div class="title-line">PRESENT PAST</div>
+            </div>
+            <button class="hero-logo-next" type="button" aria-label="Continue to introduction">↓</button>
+          </div>
+
+          <div class="hero-intro-page" id="hero-intro">
+            <div class="essay">
+              <p>
+                hello! my name is <span class="text-relative">sophia strange.<img class="text-img" src="assets/ui/underline.gif" alt="" /></span>
+              </p>
+              <p>
+                as of the fall 2026 semester, i'm a senior at parsons school of design studying communication design, 
+				        two years into my position as a contributing photographer and music journalist for new york state music, & most recently and excitingly... 
+                a <span class="text-relative">warner music group<img class="text-img" src="assets/ui/circle.gif" alt="" /></span> eta!
+              </p>
+              <p>
+              contained within this archive is a capturing of who i <br class="intro-mobile-break"> am today, the work i've created and accomplished so far while with warner,
+				      and the future in the music industry i'm working to realize for myself each and every day.
+              </p>
+			  <p>
+			  thank you kindly for your time, and <span class="text-relative">enjoy!<img class="text-img" src="assets/ui/scribble.gif" alt="" /></span>
+			  </p>
+            </div>
+            <button class="continue-arrow" type="button" aria-label="Continue to next section">↓</button>
+          </div>
+        </header>
+      </section>
+
+      <section class="panel item-panel" id="paths" aria-label="Who I Am Today page">
+        <div class="image-gallery" role="group" aria-label="Who I am today image gallery"></div>
+        <div class="item-page item-page-centered">
+          <div class="item-copy item-copy-centered">
+            <span class="item-kicker">who i am today</span>
+            <p class="gallery-intro"><i>an artist fueled <span class="text-relative">by artists!<img class="text-img" src="assets/ui/underline.gif" alt="" /> </p>
+            <p class="gallery-hint"><i>drag to rearrange - click to open</i></p>
+          </div>
+        </div>
+        <button class="continue-arrow" type="button" aria-label="Continue to next section">↓</button>
+      </section>
+
+      <dialog class="gallery-dialog" aria-label="Gallery preview" tabindex="-1">
+        <figure>
+          <img class="gallery-dialog-image" alt="" />
+          <figcaption class="gallery-dialog-caption"></figcaption>
+        </figure>
+      </dialog>
+
+      <dialog class="gallery-dialog folder-dialog" aria-labelledby="folder-dialog-title" tabindex="-1">
+        <section class="folder-dialog-module">
+          <img class="folder-dialog-work-image" alt="" hidden />
+          <div class="folder-dialog-copy">
+            <h2 id="folder-dialog-title" class="folder-dialog-title"></h2>
+          </div>
+          <section class="store-ranking" aria-label="Record store ranking" hidden>
+            <h2 class="store-ranking-title">WORKING WITH GRIDS</h2>
+            <div class="store-ranking-scroll">
+              <table class="store-ranking-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Event notes</th>
+                    <th scope="col">My thoughts</th>
+                    <th scope="col">Ranking</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-store-name="record store 1">
+                    <td>record store 1</td>
+                    <td>sun@shine.com</td>
+                    <td>123 joy blvd</td>
+                    <td>"great time!"</td>
+                    <td>pop centric</td>
+                    <td class="store-ranking-controls"></td>
+                  </tr>
+                  <tr data-store-name="record store 2">
+                    <td>record store 2</td>
+                    <td>rock@on.org</td>
+                    <td>hollywood ave</td>
+                    <td>"n/a"</td>
+                    <td>decent socials</td>
+                    <td class="store-ranking-controls"></td>
+                  </tr>
+                  <tr data-store-name="record store 3">
+                    <td>record store 3</td>
+                    <td>sleepy@time.co</td>
+                    <td>3 la lune rd</td>
+                    <td>"okay"</td>
+                    <td>quiet online</td>
+                    <td class="store-ranking-controls"></td>
+                  </tr>
+                  <tr data-store-name="record store 4">
+                    <td>record store 4</td>
+                    <td>star@struck.org</td>
+                    <td>cool tunes blvd</td>
+                    <td>"provide cd"</td>
+                    <td>old school rock</td>
+                    <td class="store-ranking-controls"></td>
+                  </tr>
+                  <tr data-store-name="record store 5">
+                    <td>record store 5</td>
+                    <td>love@ly.com</td>
+                    <td>bluebird ave</td>
+                    <td>"went well!"</td>
+                    <td>great partner!</td>
+                    <td class="store-ranking-controls"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="store-ranking-status">
+              <p>a lot of my responsibilities as an ETA revolved around the managing and developing of grids for the RPM team!</p>
+              <p>
+              i created grids of the top 150-350 stores across the country to recieve exclusive indie promotional materials, organized<br />
+              the data collected from post-event surveys and entered it into the event master grid, and expanded upon the last ETA's work <br />
+              of creating a cohesive grid of the top 500 record stores across the country, my notes about their social media presence, and <br />
+              which genre or type of event they would be ideal for.
+              </p>
+              <p>try out a bit of my work by ranking the stores above for a hypothetical big pop artist event! </p>
+            </div>
+            <p class="store-ranking-announcement" aria-live="polite"></p>
+          </section>
+          <div class="folder-photo-gallery" role="region" aria-label="Boy Harsher photo gallery" tabindex="0" hidden>
+            <img src="assets/boy harsher/1.jpg" alt="Boy Harsher photo 1" />
+            <img src="assets/boy harsher/2.jpg" alt="Boy Harsher photo 2" />
+            <img src="assets/boy harsher/3.jpg" alt="Boy Harsher photo 3" />
+            <img src="assets/boy harsher/4.jpg" alt="Boy Harsher photo 4" />
+            <img src="assets/boy harsher/5.jpg" alt="Boy Harsher photo 5" />
+            <img src="assets/boy harsher/6.jpg" alt="Boy Harsher photo 6" />
+            <img src="assets/boy harsher/7.jpg" alt="Boy Harsher photo 7" />
+            <img src="assets/boy harsher/8.jpg" alt="Boy Harsher photo 8" />
+            <img src="assets/boy harsher/9.jpg" alt="Boy Harsher photo 9" />
+          </div>
+        </section>
+      </dialog>
+
+      <section class="panel item-panel" id="ground" aria-label="Ground page">
+        <div class="folder-gallery" role="group" aria-label="Work folders">
+          <button class="folder-button folder-button-left" type="button" aria-label="Open work folder one" data-folder-title="Work folder one" data-folder-content="store-ranking">
+            <img src="assets/manila folders/closed 1.png" alt="" draggable="false" />
+          </button>
+          <button class="folder-button folder-button-right" type="button" aria-label="Open work folder three" 
+          data-folder-title="i also presented to my team on my experience as a k-pop fan and as an employee & copywriter for K-POP NARA! 
+          i introduced the RPM team to a lot of the items/events exclusive or special to the k-pop fandom lifestyle that could be translated to promotions
+          across genres." data-folder-title-break-before="employee" data-folder-title-break-after="to a lot" data-folder-title-additional-break-before="could be translated" data-folder-preview="assets/kpop fandom 101.jpg">
+            <img src="assets/manila folders/closed 3.png" alt="" draggable="false" />
+          </button>
+          <button class="folder-button folder-button-bottom" type="button" aria-label="Open Boy Harsher photo gallery" data-folder-title="a set of graphics i made for the Boy Harsher indie exclusive zines and in-store events!" data-folder-gallery="boy-harsher">
+            <img src="assets/manila folders/closed 2.png" alt="" draggable="false" />
+          </button>
+        </div>
+        <div class="item-page item-page-centered">
+          <div class="item-copy item-copy-centered">
+            <span class="item-kicker">my time as an eta: <br />the <span class="text-relative">work<img class="text-img" src="assets/ui/circle.gif" alt="" /></span></span>
+             <p class="gallery-hint">
+              <i>click to open</i></p>
+          </div>
+        </div>
+        <button class="continue-arrow" type="button" aria-label="Continue to next section">↑</button>
+      </section>
+
+      <section class="panel item-panel" id="lives" aria-label="Lives page">
+        <figure class="page-photo page-photo-right" aria-label="A desk photo">
+          <img class="page-photo-image" src="assets/squares/desk.png" alt="A desk with creative work and objects" />
+          <img class="page-photo-tape" src="assets/tape/ginghamtape.png" alt="" aria-hidden="true" />
+          <figcaption class="page-photo-annotation page-photo-annotation-left">
+            my desk on my first day!! i have the welcome sign hung above my desk at home :)
+          </figcaption>
+          <img class="page-photo-annotation-arrow page-photo-annotation-arrow-left" src="assets/ui/arrow-e.gif" alt="" aria-hidden="true" />
+        </figure>
+        <article class="paper-note paper-note-left" aria-label="Takeaway notes">
+          <img class="paper-note-background" src="assets/paper.png" alt="" />
+          <div class="paper-note-content" role="region" aria-label="Scrollable takeaway placeholder text" tabindex="0">
+            <p>i know now that i’m exactly where i want to be... and that my time as an ETA is just the beginning.</p>
+            <p>when i had called my mom to tell her that i’d gotten this position, i managed to articulate through tears of joy that it would be incorrect to say that all of my hard work had finally paid off because it felt like the beginning of everything i’ve ever wanted, not an ending.</p>
+            <p>after being able to walk the halls of the the new york office and contribute towards the incredible work done by the folks at warner, i’ve lived by those words each and every day! no matter how expansive or minute my given task in a day has been, it’s felt so rewarding.</p>
+            <p>it’s been the honor of a lifetime to learn from the folks that make the music world turn, and to help them along the way has been truly wonderful.</p>
+          </div>
+        </article>
+        <div class="item-page item-page-centered">
+          <div class="item-copy item-copy-centered">
+            <span class="item-kicker">my time as an eta: <br /> the <span class="text-relative">takeaway<img class="text-img" src="assets/ui/underline.gif" alt="" /></span></span>
+          </div>
+        </div>
+        <button class="continue-arrow" type="button" aria-label="Continue to next section">↓</button>
+      </section>
+
+      <section class="panel item-panel" id="split" aria-label="Split page">
+        <figure class="page-photo page-photo-left" aria-label="A headphones photo">
+          <img class="page-photo-image" src="assets/squares/headphones.jpg" alt="Headphones" />
+          <img class="page-photo-tape" src="assets/tape/musictape.png" alt="" aria-hidden="true" />
+          <figcaption class="page-photo-annotation">
+           the headphones i got with my first paycheck to celebrate!! (…after i tucked some money away into my 401k. you’re welcome, mom!)
+          </figcaption>
+          <img class="page-photo-annotation-arrow" src="assets/ui/arrow-sw.gif" alt="" aria-hidden="true" />
+        </figure>
+        <article class="paper-note paper-note-right" aria-label="Future ETA notes">
+          <img class="paper-note-background" src="assets/paper.png" alt="" />
+          <div class="paper-note-content" role="region" aria-label="Scrollable future ETA placeholder text" tabindex="0">
+            <p>let your passion propel you forward.</p>
+            <p>if you’re anything like me, you were drawn to warner because you listen to music in the same way you breathe: it’s constant and necessary to your being.</p>
+            <p>hold fast to that love, and it will charge every assignment and task you complete.</p>
+          </div>
+        </article>
+        <div class="item-page item-page-centered">
+          <div class="item-copy item-copy-centered">
+            <span class="item-kicker">my missive to a future <span class="text-relative">eta<img class="text-img" src="assets/ui/scribble.gif" alt="" /></span></span>
+          </div>
+        </div>
+        <button class="continue-arrow" type="button" aria-label="Continue to next section">↓</button>
+      </section>
+
+      <section class="panel item-panel" id="lost" aria-label="Lost page">
+        <figure class="future-photo future-photo-upper-left" aria-label="Warner photo">
+          <img class="future-photo-image" src="assets/squares/warner%20logo.png" alt="Warner Music Group logo" />
+          <img class="future-photo-tape" src="assets/tape/polkadottape.png" alt="" aria-hidden="true" />
+        </figure>
+        <figure class="future-photo future-photo-lower-left" aria-label="AC/DC photo">
+          <img class="future-photo-image" src="assets/squares/acdc.jpg" alt="AC/DC" />
+          <img class="future-photo-tape" src="assets/tape/startape.png" alt="" aria-hidden="true" />
+        </figure>
+        <figure class="future-photo future-photo-upper-right" aria-label="Wet Leg photo">
+          <img class="future-photo-image" src="assets/squares/wet%20leg.jpg" alt="Wet Leg" />
+          <img class="future-photo-tape" src="assets/tape/ginghamtape.png" alt="" aria-hidden="true" />
+        </figure>
+        <figure class="future-photo future-photo-lower-right" aria-label="WMX photo">
+          <img class="future-photo-image" src="assets/squares/wmx.png" alt="WMX logo" />
+          <img class="future-photo-tape" src="assets/tape/musictape.png" alt="" aria-hidden="true" />
+        </figure>
+        <article class="paper-note paper-note-center" aria-label="Future Sophia notes">
+          <img class="paper-note-background" src="assets/paper.png" alt="" />
+          <div class="paper-note-content" role="region" aria-label="Scrollable future Sophia placeholder text" tabindex="0">
+            <p>i hope i’m still inhaling music and exhaling illustrations, photographs, designs, and fervent texts to my <br> friends the way i am now. </p>
+            <p>i hope the incessant need to create when i hear a song that strikes a chord within me, an explosive and bright instinct that doesn't leave until it's fully expressed, never dulls.</p>
+            <p>i hope i’m decades into my time in new york city, decades into a career in the music that completes my world, and looking back on decades’ worth of work to be endlessly proud of. and, if i may indulge myself in a bit of luxury, i hope i'm living in an apartment with in-unit laundry. a girl’s gotta dream.</p>
+            <p>i hope, before all else, that future sophia has taken where i am presently as a charge to her motivation and pursued her dreams relentlessly... and the work towards that begins today. :)</p>
+          </div>
+        </article>
+        <div class="item-page item-page-centered">
+          <div class="item-copy item-copy-centered">
+            <span class="item-kicker">my <span class="text-relative">vision<img class="text-img" src="assets/ui/circle.gif" alt="" /></span> of a future sophia</span>
+          </div>
+        </div>
+
+        <footer class="archive-footer" aria-label="External links">
+          <div class="archive-footer-inner">
+            <nav class="archive-links" aria-label="Social and portfolio links">
+              <a class="resume-link" href="assets/Sophia%20Strange%20Resume.pdf">Resume</a>
+			  <a href="https://www.linkedin.com/in/sophiastrange" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://sjhstrange.studio/" target="_blank" rel="noreferrer">Portfolio</a>
+              <a href="https://nysmusic.com/author/sophiastrange/" target="_blank" rel="noreferrer">nys music</a>
+              <a href="https://open.spotify.com/user/g6x62d178cmt8vbngzc2jc2mo?si=740499cd5db14c2e" target="_blank" rel="noreferrer">Spotify</a>
+            </nav>
+          </div>
+        </footer>
+
+        <button class="continue-arrow" type="button" aria-label="Back to previous section">↑</button>
+      </section>
+    </main>
+
+    <dialog class="gallery-dialog resume-dialog" aria-label="Resume preview" tabindex="-1">
+      <figure>
+        <iframe
+          class="resume-dialog-document"
+          src="assets/Sophia%20Strange%20Resume.pdf"
+          title="Sophia Strange resume"
+        ></iframe>
+        <figcaption class="gallery-dialog-caption">
+          <a href="assets/Sophia%20Strange%20Resume.pdf" download="Sophia Strange Resume.pdf">download resume</a>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
