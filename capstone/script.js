@@ -462,6 +462,9 @@ const arrowButtons = [...document.querySelectorAll('.continue-arrow')];
 const heroIntroPage = document.querySelector('.hero-intro-page');
 const heroLogoNext = document.querySelector('.hero-logo-next');
 let isAnimating = false;
+let wheelGestureMode = null;
+let wheelGestureNavigated = false;
+let wheelGestureTimer;
 
 function getNavigationTargets() {
 	if (window.matchMedia('(max-width: 600px)').matches &&
@@ -553,7 +556,7 @@ arrowButtons.forEach((button) => {
 		const targets = getNavigationTargets();
 		const currentIndex = getCurrentSectionIndex();
 		const isFinalSection = currentIndex === targets.length - 1;
-		const nextIndex = isFinalSection ? 0 : currentIndex + 1;
+		const nextIndex = isFinalSection ? currentIndex - 1 : currentIndex + 1;
 		goToSection(nextIndex);
 	});
 });
@@ -573,23 +576,46 @@ window.addEventListener('wheel', (event) => {
 		}
 		return;
 	}
+	window.clearTimeout(wheelGestureTimer);
+	wheelGestureTimer = window.setTimeout(() => {
+		wheelGestureMode = null;
+		wheelGestureNavigated = false;
+	}, 500);
 	const noteContent = event.target instanceof Element
 		? event.target.closest('.paper-note-content')
 		: null;
-	if (noteContent instanceof HTMLElement) {
-		const maxScroll = noteContent.scrollHeight - noteContent.clientHeight;
-		const canScrollWithWheel = event.deltaY < 0
+	const isNoteScrollable = noteContent instanceof HTMLElement &&
+		(event.deltaY < 0
 			? noteContent.scrollTop > 0
-			: noteContent.scrollTop < maxScroll;
-		if (canScrollWithWheel) return;
+			: noteContent.scrollTop < noteContent.scrollHeight - noteContent.clientHeight);
+
+	if (wheelGestureMode === 'note') {
+		if (noteContent instanceof HTMLElement && isNoteScrollable) return;
 		event.preventDefault();
 		return;
 	}
-	if (Math.abs(event.deltaY) < 10 || isAnimating) return;
+	if (wheelGestureMode === 'page') {
+		event.preventDefault();
+		if (!wheelGestureNavigated && Math.abs(event.deltaY) > 10 && !isAnimating) {
+			wheelGestureNavigated = true;
+			const direction = event.deltaY > 0 ? 1 : -1;
+			goToSection(getCurrentSectionIndex() + direction);
+		}
+		return;
+	}
+
+	if (isNoteScrollable) {
+		wheelGestureMode = 'note';
+		return;
+	}
+
+	wheelGestureMode = 'page';
 	event.preventDefault();
-	const currentIndex = getCurrentSectionIndex();
-	const direction = event.deltaY > 0 ? 1 : -1;
-	goToSection(currentIndex + direction);
+	if (Math.abs(event.deltaY) > 10 && !isAnimating) {
+		wheelGestureNavigated = true;
+		const direction = event.deltaY > 0 ? 1 : -1;
+		goToSection(getCurrentSectionIndex() + direction);
+	}
 }, { passive: false });
 
 window.addEventListener('keydown', (event) => {
