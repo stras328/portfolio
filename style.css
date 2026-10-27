@@ -1,5 +1,47 @@
 /* Gallery navigation buttons */
 
+.gallery-masonry {
+	display: block !important;
+	column-count: 1;
+	column-gap: 1rem;
+}
+
+.gallery-masonry > .wp-block-image {
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 1rem !important;
+	break-inside: avoid;
+}
+
+.gallery-masonry > .wp-block-image a {
+	display: block;
+	width: 100%;
+	height: auto !important;
+	aspect-ratio: auto !important;
+}
+
+.gallery-masonry > .wp-block-image img {
+	display: block;
+	min-width: 0 !important;
+	width: 100% !important;
+	max-height: none !important;
+	height: auto !important;
+	margin-left: 0 !important;
+	transform: none !important;
+}
+
+@media (min-width: 640px) {
+	.gallery-masonry {
+		column-count: 2;
+	}
+}
+
+@media (min-width: 1024px) {
+	.gallery-masonry {
+		column-count: 3;
+	}
+}
+
 @media (max-width: 768px) {
   .posts-ajax__tab-label {
     font-size: 0.95rem;
@@ -184,4 +226,3 @@
 .pswp__bg {
 	background: #ededed !important;
 }
-
