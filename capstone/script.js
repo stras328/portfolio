@@ -316,8 +316,8 @@ if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 	const setPresentationPage = (page) => {
 		if (activePresentationPageCount < 1) return;
 		activePresentationPage = Math.max(1, Math.min(page, activePresentationPageCount));
-		const slide = String(activePresentationPage).padStart(2, '0');
-		folderDialogWorkImage.src = `${activePresentationSource}${slide}.jpg`;
+		const slide = String(activePresentationPage);
+		folderDialogWorkImage.src = `${activePresentationSource}${slide}.png`;
 		folderDialogWorkImage.alt = `K-pop Fandom 101, slide ${activePresentationPage} of ${activePresentationPageCount}`;
 		presentationPage.textContent =
 			`Slide ${activePresentationPage} of ${activePresentationPageCount}`;
