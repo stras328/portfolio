@@ -1,4 +1,12 @@
 /* Arrows */
+* {
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
 .arrows {
 	pointer-events: none;
 	position: fixed;
