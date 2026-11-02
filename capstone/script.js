@@ -292,15 +292,38 @@ const galleryImages = [
 const folderDialog = document.querySelector('.folder-dialog');
 const folderDialogTitle = document.querySelector('.folder-dialog-title');
 const folderDialogWorkImage = document.querySelector('.folder-dialog-work-image');
+const presentationControls = document.querySelector('.presentation-controls');
+const presentationPrevious = document.querySelector('.presentation-previous');
+const presentationNext = document.querySelector('.presentation-next');
+const presentationPage = document.querySelector('.presentation-page');
 const folderDialogCopy = document.querySelector('.folder-dialog-copy');
 const folderStoreRanking = document.querySelector('.store-ranking');
 const folderPhotoGallery = document.querySelector('.folder-photo-gallery');
 if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 	folderDialogTitle instanceof HTMLElement && folderDialogWorkImage instanceof HTMLImageElement &&
+	presentationControls instanceof HTMLElement &&
+	presentationPrevious instanceof HTMLButtonElement &&
+	presentationNext instanceof HTMLButtonElement &&
+	presentationPage instanceof HTMLElement &&
 	folderDialogCopy instanceof HTMLElement && folderStoreRanking instanceof HTMLElement &&
 	folderPhotoGallery instanceof HTMLElement) {
 	let activeFolderImage = null;
 	let activeFolderImageSource = '';
+	let activePresentationSource = '';
+	let activePresentationPage = 1;
+	let activePresentationPageCount = 0;
+
+	const setPresentationPage = (page) => {
+		if (activePresentationPageCount < 1) return;
+		activePresentationPage = Math.max(1, Math.min(page, activePresentationPageCount));
+		const slide = String(activePresentationPage).padStart(2, '0');
+		folderDialogWorkImage.src = `${activePresentationSource}${slide}.jpg`;
+		folderDialogWorkImage.alt = `K-pop Fandom 101, slide ${activePresentationPage} of ${activePresentationPageCount}`;
+		presentationPage.textContent =
+			`Slide ${activePresentationPage} of ${activePresentationPageCount}`;
+		presentationPrevious.disabled = activePresentationPage === 1;
+		presentationNext.disabled = activePresentationPage === activePresentationPageCount;
+	};
 
 	const rankingBody = folderStoreRanking.querySelector('tbody');
 	const rankingAnnouncement = folderStoreRanking.querySelector('.store-ranking-announcement');
@@ -407,17 +430,25 @@ if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 			folderStoreRanking.hidden = !showSpreadsheet;
 			folderPhotoGallery.hidden = !showGallery;
 			folderDialogWorkImage.hidden = !showWorkPreview;
+			activePresentationSource = folderButton.dataset.folderPreview || '';
+			activePresentationPageCount = Number(folderButton.dataset.folderPages) || 0;
+			presentationControls.hidden = activePresentationPageCount === 0;
+			folderDialog.toggleAttribute('data-presentation', activePresentationPageCount > 0);
 			if (showWorkPreview) {
-				folderDialogWorkImage.src = folderButton.dataset.folderPreview || '';
-				folderDialogWorkImage.alt = `${folderButton.dataset.folderTitle || 'Work folder'} preview`;
+				if (activePresentationPageCount > 0) {
+					setPresentationPage(1);
+				} else {
+					folderDialogWorkImage.src = activePresentationSource;
+				}
+				folderDialogWorkImage.title = `${folderButton.dataset.folderTitle || 'Work folder'} preview`;
 				folderDialog.dataset.layout = 'work';
 			} else if (showSpreadsheet) {
 				folderDialogWorkImage.removeAttribute('src');
-				folderDialogWorkImage.alt = '';
+				folderDialogWorkImage.title = '';
 				folderDialog.dataset.layout = 'ranking';
 			} else {
 				folderDialogWorkImage.removeAttribute('src');
-				folderDialogWorkImage.alt = '';
+				folderDialogWorkImage.title = '';
 				delete folderDialog.dataset.layout;
 			}
 			if (showGallery) {
@@ -430,6 +461,13 @@ if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 		});
 	}
 
+	presentationPrevious.addEventListener('click', () => {
+		setPresentationPage(activePresentationPage - 1);
+	});
+	presentationNext.addEventListener('click', () => {
+		setPresentationPage(activePresentationPage + 1);
+	});
+
 	folderDialog.addEventListener('close', () => {
 		if (activeFolderImage instanceof HTMLImageElement) {
 			activeFolderImage.src = activeFolderImageSource;
@@ -438,9 +476,13 @@ if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 		}
 		delete folderDialog.dataset.gallery;
 		delete folderDialog.dataset.layout;
+		delete folderDialog.dataset.presentation;
 		folderDialogWorkImage.hidden = true;
 		folderDialogWorkImage.removeAttribute('src');
-		folderDialogWorkImage.alt = '';
+		folderDialogWorkImage.title = '';
+		presentationControls.hidden = true;
+		activePresentationSource = '';
+		activePresentationPageCount = 0;
 		folderDialogCopy.hidden = false;
 		folderStoreRanking.hidden = true;
 		folderPhotoGallery.hidden = true;
@@ -449,6 +491,12 @@ if (folderGallery && folderDialog instanceof HTMLDialogElement &&
 		if (event.key === 'Escape') {
 			event.preventDefault();
 			folderDialog.close();
+		} else if (activePresentationPageCount > 0 && event.key === 'ArrowLeft') {
+			event.preventDefault();
+			setPresentationPage(activePresentationPage - 1);
+		} else if (activePresentationPageCount > 0 && event.key === 'ArrowRight') {
+			event.preventDefault();
+			setPresentationPage(activePresentationPage + 1);
 		}
 	});
 	folderDialog.addEventListener('click', (event) => {
